@@ -1,0 +1,39 @@
+server:
+  port: 8088
+spring:
+  security:
+    user:
+      name: admin
+      password: 123456
+
+  datasource:
+    url: jdbc:mysql://116.63.163.171:3306/sciradar_2?serverTimeZone=UTC&useUnicode=true&characterEncoding=UTF-8&useSSL=false&autoReconnect=true
+    username: sd_dev
+    password: avFRYm73F8O@
+    hikari:
+      #      auto-commit: true
+      #      connection-test-query: SELECT 1
+      #      connection-timeout: 1000
+      #      idle-timeout: 3000
+      max-lifetime: 60000
+#      maximum-pool-size: 30
+#      minimum-idle: 10
+#      pool-name: HikariCP
+#      validation-timeout: 1000
+
+mybatis-plus:
+  mapper-locations: classpath:/xml/*Mapper.xml
+  typeAliasesPackage: com.llc.spring_security_demo.entity
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+
+github:
+  client:
+    id: 91185a0899713d2c470a
+    secret: f4d8a6a3f5fbcdb1d1aa04c9b5d1f057e7a683e1
+
